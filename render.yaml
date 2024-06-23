@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xray-render
+    env: docker
+    region: oregon  # Choose the region closest to your users
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PROTOCOL
+        value: vless  # or vmess
+      - key: UUID
+        value: 0890d027-7347-4f82-9bff-17107d4fd9b8
